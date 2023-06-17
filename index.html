@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        #question-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #options-container {
+            margin-top: 10px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="question-container">
+        <img src="C:\Users\mangu\OneDrive\Desktop\bald.jpg" alt="Image 1">
+        <span>+</span>
+        <img src="C:\Users\mangu\OneDrive\Desktop\mirror.jpg" alt="Image 2">
+        <span>=</span>
+    </div>
+
+    <div id="options-container">
+        <input type="radio" name="answer" value="a"> a - madaari<br>
+        <input type="radio" name="answer" value="b"> b - ac cleaner (rohitbhai)<br>
+        <input type="radio" name="answer" value="c"> c - giganigga<br>
+    </div>
+
+    <button id="submit-btn" onclick="checkAnswer()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            var selectedOption = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedOption) {
+                var answer = selectedOption.value;
+                if (answer === 'b') {
+                    document.getElementById("result").textContent = "you are nigga correct mf!";
+                } else {
+                    document.getElementById("result").textContent = "wrong asshole";
+                }
+            } else {
+                document.getElementById("result").textContent = "Please select an option.";
+            }
+        }
+    </script>
+</body>
+</html>
